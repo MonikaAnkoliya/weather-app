@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "react": "18.3.1",
     "react-native": "0.75.2"
   },
@@ -21,17 +22,39 @@
     "@react-native/eslint-config": "0.75.2",
     "@react-native/metro-config": "0.75.2",
     "@react-native/typescript-config": "0.75.2",
-    "@types/react": "^18.2.6",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^12.6.1",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.3.5",
+    "@types/react-native": "^0.73.0",
     "@types/react-test-renderer": "^18.0.0",
-    "babel-jest": "^29.6.3",
+    "babel-jest": "^29.7.0",
     "eslint": "^8.19.0",
-    "jest": "^29.6.3",
+    "jest": "^29.7.0",
     "prettier": "2.8.8",
-    "react-test-renderer": "18.3.1",
-    "typescript": "5.0.4"
+    "react-test-renderer": "^18.3.1",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.0.4"
   },
   "engines": {
     "node": ">=18"
   },
+  "jest": {
+  "preset": "react-native",
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json",
+    "node"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-native/extend-expect"
+  ]
+},
   "packageManager": "yarn@3.6.4"
 }
