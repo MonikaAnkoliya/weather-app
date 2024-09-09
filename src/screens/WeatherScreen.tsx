@@ -22,7 +22,6 @@ const WeatherScreen = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Weather App</Text>
       <TextInput
-        style={styles.input}
         placeholder="Enter city name"
         value={city}
         onChangeText={setCity}
@@ -70,14 +69,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
     textAlign: 'center',
-  },
-  input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    paddingHorizontal: 10,
-    marginBottom: 20,
-    borderRadius: 5,
   },
   weatherContainer: {
     marginTop: 20,
